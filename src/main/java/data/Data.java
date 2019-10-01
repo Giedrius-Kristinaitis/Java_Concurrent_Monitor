@@ -5,7 +5,7 @@ public class Data implements Comparable<Data> {
     private String title;
     private double price;
     private int quantity;
-    private String mixedTitle;
+    private String result;
 
     public Data(String title, double price, int quantity) {
         this.title = title;
@@ -13,12 +13,12 @@ public class Data implements Comparable<Data> {
         this.quantity = quantity;
     }
 
-    public String getMixedTitle() {
-        return mixedTitle;
+    public String getResult() {
+        return result;
     }
 
-    public void setMixedTitle(String mixedTitle) {
-        this.mixedTitle = mixedTitle;
+    public void setResult(String result) {
+        this.result = result;
     }
 
     public String getTitle() {
@@ -47,10 +47,10 @@ public class Data implements Comparable<Data> {
 
     @Override
     public int compareTo(Data o) {
-        if (mixedTitle == null || o == null || o.mixedTitle == null) {
+        if (result == null || o == null || o.result == null) {
             return 0;
         }
 
-        return mixedTitle.compareTo(o.mixedTitle);
+        return result.compareTo(o.result);
     }
 }
