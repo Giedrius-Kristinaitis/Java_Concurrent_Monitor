@@ -14,7 +14,7 @@ public class Main {
 
     private final int THREAD_COUNT = 4;
     private Thread[] threads;
-    private CounterInterface counter = new Counter(5);
+    private CounterInterface counter = new Counter(25);
     private MonitorInterface<Data> finalData = new Monitor<Data>(25);
     private MonitorInterface<Data> monitor = new Monitor<Data>(10);
 

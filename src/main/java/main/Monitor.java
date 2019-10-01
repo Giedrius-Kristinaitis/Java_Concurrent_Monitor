@@ -13,7 +13,7 @@ public class Monitor<T extends Comparable<T>> implements MonitorInterface<T> {
 
     @Override
     public synchronized void add(T t) {
-        while (count == data.length - 1) {
+        while (count == data.length) {
             try {
                 wait();
             } catch (InterruptedException ex) {
@@ -65,7 +65,7 @@ public class Monitor<T extends Comparable<T>> implements MonitorInterface<T> {
             try {
                 if (willHaveMoreData) {
                     wait();
-                } else {
+                } else if (count == 0) {
                     return null;
                 }
             } catch (InterruptedException ex) {
@@ -91,6 +91,7 @@ public class Monitor<T extends Comparable<T>> implements MonitorInterface<T> {
     public synchronized void clear() {
         data = new Object[data.length];
         count = 0;
+        notifyAll();
     }
 
     @Override
