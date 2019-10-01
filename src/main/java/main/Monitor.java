@@ -1,7 +1,7 @@
 package main;
 
 @SuppressWarnings("unchecked")
-public class Monitor<T extends Object> implements MonitorInterface<T> {
+public class Monitor<T extends Comparable<T>> implements MonitorInterface<T> {
 
     private volatile Object[] data;
     private volatile int count;
@@ -21,9 +21,42 @@ public class Monitor<T extends Object> implements MonitorInterface<T> {
             }
         }
 
-        data[count++] = t;
+        int index = findIndex(t);
+
+        if (data[index] != null) {
+            shiftElements(index);
+        }
+
+        data[index] = t;
+
+        count++;
 
         notifyAll();
+    }
+
+    private synchronized void shiftElements(int index) {
+        for (int i = data.length - 1; i > index; i--) {
+            data[i] = data[i - 1];
+        }
+
+        data[index] = null;
+    }
+
+    private synchronized int findIndex(T t) {
+        int index = 0;
+
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] == null) {
+                break;
+            }
+
+            if (((Comparable<T>) data[i]).compareTo(t) <= 0) {
+                index = i + 1;
+                break;
+            }
+        }
+
+        return index;
     }
 
     @Override

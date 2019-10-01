@@ -26,6 +26,7 @@ public class ThreadAction implements Runnable {
             Data data = monitor.pop();
             counter.count();
             processor.process(data);
+            finalData.add(data);
         }
     }
 }

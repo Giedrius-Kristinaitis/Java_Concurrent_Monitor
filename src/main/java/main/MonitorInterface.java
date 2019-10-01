@@ -1,6 +1,6 @@
 package main;
 
-public interface MonitorInterface<T> {
+public interface MonitorInterface<T extends Comparable<T>> {
 
     void add(T t);
 
