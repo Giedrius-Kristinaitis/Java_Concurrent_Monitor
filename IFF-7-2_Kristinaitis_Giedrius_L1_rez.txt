@@ -1,0 +1,27 @@
+                    Title|     Price|  Quantity|    Result
+----------------------------------------------------------
+ 50/2 bbbbbbbbbbbbbbbbbbb|420.690000|       100|         b
+  4/3 bbbbbbbbbbbbbbbbbbb|420.690000|       100|         b
+                 vtbjgjnn|420.690000|       100|         g
+                 sdcwdccf|420.690000|       100|         d
+                 rtrtrtrt|420.690000|       100|         r
+                dbgbhdfgb|420.690000|       100|         b
+                  plplplp|420.690000|       100|         l
+                 vcvcvccv|420.690000|       100|         v
+                   sdsdsd|420.690000|       100|         s
+                   dfdfdf|420.690000|       100|         d
+                   ghghgh|420.690000|       100|         g
+                 hjhjhjhj|420.690000|       100|         h
+                sdfvsdfgb|420.690000|       100|         v
+                   gmkhjm|420.690000|       100|         j
+                sdfgbdfbh|420.690000|       100|         g
+                     ghmg|420.690000|       100|         m
+                   Frfgst|420.690000|       100|         s
+                 sdfvsdfv|420.690000|       100|         s
+                 dfghnfhn|420.690000|       100|         n
+                       ss|420.690000|       100|         s
+                     Sxth|420.690000|       100|         t
+  3/2 bbbbbbbbbbbbbbbbbbb|420.690000|       100|         b
+                    Svnth|420.690000|       100|         t
+  2/1 bbbbbbbbbbbbbbbbbbb|420.690000|       100|         b
+ 51/3 bbbbbbbbbbbbbbbbbbb|420.690000|       100|         b

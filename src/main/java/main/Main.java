@@ -6,6 +6,10 @@ import data.DataProcessor;
 import file.DataReader;
 import file.FileReaderInterface;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -31,7 +35,22 @@ public class Main {
     }
 
     private void printResults(String file) {
+        try {
+            PrintWriter writer = new PrintWriter(new FileOutputStream(file));
 
+            writer.printf("%25s|%10s|%10s|%10s\n", "Title", "Price", "Quantity", "Result");
+            writer.println("----------------------------------------------------------");
+
+            for (int i = 0; i < finalData.size(); i++) {
+                Data data = finalData.get(i);
+
+                writer.printf("%25s|%10f|%10d|%10s\n", data.getTitle(), data.getPrice(), data.getQuantity(), data.getResult());
+            }
+
+            writer.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     private void populateMonitor(String file) {

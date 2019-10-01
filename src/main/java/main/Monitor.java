@@ -83,6 +83,15 @@ public class Monitor<T extends Comparable<T>> implements MonitorInterface<T> {
     }
 
     @Override
+    public synchronized T get(int index) {
+        if (index < 0 || index > data.length) {
+            throw new IllegalArgumentException("Invalid index");
+        }
+
+        return (T) data[index];
+    }
+
+    @Override
     public int size() {
         return count;
     }

@@ -6,6 +6,8 @@ public interface MonitorInterface<T extends Comparable<T>> {
 
     T pop();
 
+    T get(int index);
+
     int size();
 
     void clear();
