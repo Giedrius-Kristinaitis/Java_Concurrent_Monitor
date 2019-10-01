@@ -52,6 +52,7 @@ public class Monitor<T extends Comparable<T>> implements MonitorInterface<T> {
 
             if (((Comparable<T>) data[i]).compareTo(t) <= 0) {
                 index = i + 1;
+            } else {
                 break;
             }
         }
